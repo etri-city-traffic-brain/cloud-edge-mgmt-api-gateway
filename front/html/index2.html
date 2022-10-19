@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="Author" content="" />
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="lib/css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700" />
+        <link rel="stylesheet" type="text/css" href="lib/css/font.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="lib/css/style.css" />
+        <link rel="stylesheet" href="../20180514_innogrid/lib/css/style.css" />
+
+        <!--[if lt IE 9]>
+            <script src="/lib/js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="layout_wrap">
+            <header class="header_common">
+                <div class="layout_inner">
+                    <h1 class="header_top_logo">
+                        <a href="/"><img src="/lib/images/header_logo_uniq.png" alt="Cloudit"/></a>
+                    </h1>
+                    <nav class="header_nav">
+                        <ul class="header_nav_menu">
+                            <li class="on"><a href="/src/guide.html">이용안내</a></li>
+                            <li>
+                                <a href="/src/data.html">오픈데이터</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/data_oda.html">오픈데이터 API</a>
+                                    <a href="/src/data_file.html">파일데이터</a>
+                                    <a href="/src/data_recommend.html">추천 데이터</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/src/lib_notice.html">정보공유</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/lib_notice.html">공지사항</a>
+                                    <a href="/src/lib_board.html">자유게시판</a>
+                                    <a href="/src/lib_request.html">API 요청 게시판</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/src/mypage.html">마이페이지</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/mypage.html">나의 오픈 API</a>
+                                    <a href="/src/mypage_history.html">나의 사용이력</a>
+                                    <a href="/src/mypage_favorites.html">즐겨찾기</a>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div class="header_top_user" style="display:none">
+                            <div class="header_top_user_photo"></div>
+                            <button type="button" class="header_top_user_btn js_arr_toggle js_user_open">Hong Kil Dong</button>
+                            <div class="header_top_user_menu">
+                                <a href="#">사용자 설정</a>
+                                <div class="header_top_user_menu_btn"><a href="#">Logout</a></div>
+                            </div>
+                        </div>
+                        <div class="header_top_user">
+                            <a href="membership/login.html">LOGIN</a>
+                            <a href="membership/signup.html">SIGNUP</a>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //layout_inner -->
+            </header>
+
+            <section class="header_cont">
+                <div class="layout_inner layout_clearfix">
+                    <div class="header_cont_search">
+                        <div class="header_cont_search_wrap">
+                            <form method="">
+                                <div class="header_cont_search_option js_list_select">
+                                    <button type="button" class="header_cont_search_option_btn js_arr_toggle"><span>검색조건</span></button>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="option1" name="option-group" /><label for="option1">Option 1</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="option2" name="option-group" /><label for="option2">Option 2</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="option3" name="option-group" /><label for="option3">Option 3</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="option4" name="option-group" /><label for="option4">Option 4</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- //header_cont_search_option -->
+                                <input type="text" id="" class="header_cont_search_input" />
+                                <button type="submit" id="" class="header_cont_search_btn"><span>Search</span></button>
+                            </form>
+                        </div>
+                        <!-- //header_cont_search_wrap -->
+                    </div>
+                    <!-- //header_cont_search -->
+
+                    <div class="header_cont_count">
+                        <div>
+                            <span>All<br />Open Data</span><strong>25,818</strong>
+                        </div>
+                        <div>
+                            <span>New<br />Open Data</span><strong>218</strong>
+                        </div>
+                    </div>
+                    <!-- //header_cont_count -->
+
+                    <div class="header_cont_notice">
+                        <h3>NOTICE</h3>
+                        <div class="swiper-container">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide"><a href="#">건물정보 부동산 중개업 정보(일간)</a></li>
+                                <li class="swiper-slide"><a href="#">건물정보 부동산 중개업 정보</a></li>
+                                <li class="swiper-slide"><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //header_cont_notice -->
+                </div>
+                <!-- //header_cont -->
+            </section>
+
+            <section class="main_visual">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide main_visual_01">
+                            <div>
+                                <p class="tit">표준사업분류 기준 오픈데이터 안내</p>
+                                <p class="cont">
+                                    통계청에서 제공하는 한국표준산업분류의 대분류, 중분류, 소분류, 기준으로 분류된 오픈데이터를 탐색할 수
+                                    있는 인터페이스를 제공합니다.<br />
+                                    나에게 맞는 OPEn API를 찾아보세요.
+                                </p>
+                                <a href="#" class="slide_btn">View</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide main_visual_01">
+                            <div>
+                                <p class="tit">표준사업분류 기준 오픈데이터 안내</p>
+                                <p class="cont">
+                                    통계청에서 제공하는 한국표준산업분류의 대분류, 중분류, 소분류, 기준으로 분류된 오픈데이터를 탐색할 수
+                                    있는 인터페이스를 제공합니다.<br />
+                                    나에게 맞는 OPEn API를 찾아보세요.
+                                </p>
+                                <a href="#" class="slide_btn">View</a>
+                            </div>
+                        </li>
+                        <li class="swiper-slide main_visual_01">
+                            <div>
+                                <p class="tit">표준사업분류 기준 오픈데이터 안내</p>
+                                <p class="cont">
+                                    통계청에서 제공하는 한국표준산업분류의 대분류, 중분류, 소분류, 기준으로 분류된 오픈데이터를 탐색할 수
+                                    있는 인터페이스를 제공합니다.<br />
+                                    나에게 맞는 OPEn API를 찾아보세요.
+                                </p>
+                                <a href="#" class="slide_btn">View</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <!-- //swiper-container -->
+            </section>
+            <!-- //main_visual -->
+
+            <section class="main_shortcut">
+                <div class="layout_inner">
+                    <a href="#" class="main_shortcut_medical"><span>보건의료</span></a>
+                    <a href="#" class="main_shortcut_economy"><span>경제</span></a>
+                    <a href="#" class="main_shortcut_culture"><span>문화관광</span></a>
+                    <a href="#" class="main_shortcut_education"><span>교육</span></a>
+                    <a href="#" class="main_shortcut_natunal"><span>환경</span></a>
+                    <a href="#" class="main_shortcut_space"><span>공간정보</span></a>
+                    <a href="#" class="main_shortcut_welfare"><span>복지</span></a>
+                    <a href="#" class="main_shortcut_admin"><span>행정</span></a>
+                    <a href="#" class="main_shortcut_food"><span>식품</span></a>
+                    <a href="#" class="main_shortcut_farming"><span>농축수산</span></a>
+                </div>
+            </section>
+            <!-- //main_shortcut -->
+
+            <main class="main_index">
+                <div class="layout_inner">
+                    <div class="main_index_banner_wrap layout_clearfix">
+                        <div class="main_index_banner_large">
+                            <h3>오픈데이터</h3>
+                            <a href="#"><img src="/lib/images/main_largeBanner.jpg" alt=""/></a>
+                        </div>
+                        <div class="main_index_banner_small swiper-container">
+                            <h3>인기 오픈데이터</h3>
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <img src="/lib/images/tmp_banner.jpg" alt="" />
+                                        <div class="main_index_banner_small_tit">
+                                            <p class="main_index_banner_small_tit_txt">통계로 본 강원의 사회지표 보고서</p>
+                                            <p class="main_index_banner_small_tit_date">2015. 05. 01</p>
+                                        </div>
+                                        <div class="main_index_banner_small_hit layout_clearfix">
+                                            <span>조회수</span>
+                                            <strong>58</strong>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <img src="/lib/images/tmp_banner2.jpg" alt="" />
+                                        <div class="main_index_banner_small_tit">
+                                            <p class="main_index_banner_small_tit_txt">통계로 본 강원의 사회지표 보고서</p>
+                                            <p class="main_index_banner_small_tit_date">2015. 05. 01</p>
+                                        </div>
+                                        <div class="main_index_banner_small_hit layout_clearfix">
+                                            <span>조회수</span>
+                                            <strong>58</strong>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <img src="/lib/images/tmp_banner3.jpg" alt="" />
+                                        <div class="main_index_banner_small_tit">
+                                            <p class="main_index_banner_small_tit_txt">통계로 본 강원의 사회지표 보고서</p>
+                                            <p class="main_index_banner_small_tit_date">2015. 05. 01</p>
+                                        </div>
+                                        <div class="main_index_banner_small_hit layout_clearfix">
+                                            <span>조회수</span>
+                                            <strong>58</strong>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="swiper-slide">
+                                    <a href="#">
+                                        <img src="/lib/images/tmp_banner.jpg" alt="" />
+                                        <div class="main_index_banner_small_tit">
+                                            <p class="main_index_banner_small_tit_txt">통계로 본 강원의 사회지표 보고서</p>
+                                            <p class="main_index_banner_small_tit_date">2015. 05. 01</p>
+                                        </div>
+                                        <div class="main_index_banner_small_hit layout_clearfix">
+                                            <span>조회수</span>
+                                            <strong>58</strong>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- //main_index_banner_small -->
+                    </div>
+                    <!-- //main_index_banner_wrap -->
+
+                    <div class="main_index_board_wrap layout_clearfix">
+                        <section class="main_index_board">
+                            <div class="main_index_board_group">
+                                <h3>신규 오픈데이터</h3>
+                                <a href="#" class="main_index_board_link"><span>More</span></a>
+                                <ul class="main_index_board_list">
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                </ul>
+                            </div>
+                            <!-- //main_index_board_group -->
+
+                            <div class="main_index_board_group">
+                                <h3>커뮤니케이션</h3>
+                                <a href="#" class="main_index_board_link"><span>More</span></a>
+                                <ul class="main_index_board_list">
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                    <li><a href="#">오픈데이터 사이트 오픈했습니다. 많은 이용부탁드립니다.</a><span>2019.01.22</span></li>
+                                </ul>
+                            </div>
+                            <!-- //main_index_board_group -->
+                        </section>
+                        <section class="main_index_banner">
+                            <a href="#"><img src="/lib/images/main_banner_01.jpg" alt="case study"/></a>
+                            <a href="#"><img src="/lib/images/main_banner_02.jpg" alt="공공데이터가 일자리를 만듭니다."/></a>
+                        </section>
+                    </div>
+                    <!-- //main_index_board_wrap -->
+                </div>
+                <!-- //layout_inner -->
+            </main>
+
+            <footer class="footer_common">
+                <div class="footer_cont">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_cont_logo">
+                            <a href="#"><img src="/lib/images/footer_logo_inno.png" alt="정보통신산업진흥원"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_molit.png" alt="국토교통부"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_innogrid.png" alt="이노그리드"/></a>
+                        </div>
+                        <div class="footer_cont_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이메일</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //footer_cont -->
+                <div class="footer_address">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_address_company">
+                            <p class="footer_address_company_address">
+                                서울시 서초구 강남대로 623 우일빌딩 10층 ( 서울시 서초구 잠원동 12-5,6 ) 이노그리드
+                            </p>
+                            <p>
+                                대표이사 : 김명진&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 : 12-73037383<br />통신판매업신고 : 제
+                                2012-서울강남-00571호
+                            </p>
+                        </div>
+                        <p class="footer_address_copyright">COPYRIGHT 2021 innogrid. All right reserved.</p>
+                    </div>
+                    <!-- //layout_inner -->
+                </div>
+                <!-- //footer_address -->
+            </footer>
+        </div>
+        <!-- //layout_wrap -->
+
+        <script src="lib/js/jquery-1.9.1.min.js"></script>
+        <script src="lib/js/jquery.script.js"></script>
+        <script src="lib/js/swiper.min.js"></script>
+        <script>
+            var mainSwiper = new Swiper(".main_visual .swiper-container", {
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            var newsSwiper = new Swiper(".header_cont_notice .swiper-container", {
+                direction: "vertical",
+                centeredSlides: true,
+                autoplay: {
+                    delay: 4500,
+                    disableOnInteraction: false,
+                },
+            });
+
+            var bannerSwiper = new Swiper(".main_index_banner_small.swiper-container", {
+                slidesPerView: 3,
+                spaceBetween: 5,
+                slidesPerGroup: 3,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>

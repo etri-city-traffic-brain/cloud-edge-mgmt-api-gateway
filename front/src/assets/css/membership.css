@@ -1,0 +1,314 @@
+body {
+    height: 100%;
+    min-height: 750px;
+    color: #62676d;
+    padding-left: 50%;
+    background: #8e50f6 url(../images/membership_bg.png) no-repeat center 180px;;
+}
+.body_membership header {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    margin-right: 100px;
+    min-width: 440px;
+    padding: 594px 60px 0 0;
+    background: transparent;
+    border: 0;
+    text-align: right
+}
+
+.body_membership main {
+    min-height: 100%;
+    padding: 165px 0 150px 60px;
+    margin-left: -100px;
+    background-color: #fff
+}
+.body_membership main h1 {
+    color: #262c32;
+    font-size: 55px;
+    font-weight: normal;
+    text-align: justify;
+    margin-left: -3px;
+    letter-spacing: -2px
+}
+.body_membership main h2 {
+    color: #262c32;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 7px
+}
+
+.body_membership main section {
+    position: relative;
+    padding: 60px 0;
+    margin: 55px 0 60px;
+    width: 580px
+}
+.body_membership main section:before ,
+.body_membership main section:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    width: 30px;
+    height: 0;
+    border-top: 2px solid #262c32
+}
+.body_membership main section:after {
+    top: auto;
+    bottom: 0
+}
+
+.membership_btns {
+    width: 580px
+}
+.membership_btns .btn_confirm {
+    width: 100%;
+    font-size: 20px;
+}
+
+.membership_btns .membership_menu {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-top: 10px
+}
+.membership_btns .membership_menu a {
+    position: relative;
+    display: table-cell;
+    text-align: center;
+    line-height: 35px;
+    color: #62676d;
+    font-family: 'Gulim', sans-serif;
+}
+.membership_btns .membership_menu a:first-child ~ a:before {
+    content: 'l';
+    color: #c8ccd0;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+.membership_btns .membership_menu a:hover {
+    color: #8e50f6
+}
+
+.membership_login {
+    margin-bottom: -5px
+}
+.membership_login input {
+    width: 100%;
+    height: 56px;
+    padding-left: 20px;
+    margin-bottom: 5px;
+    border: 1px solid #dee7f0;
+    background: #f8fafc;
+    font-size: 14px
+}
+.membership_login input::-webkit-input-placeholder {
+    color: #b3c0cd
+}
+.membership_login input:-ms-input-placeholder {
+    color: #b3c0cd
+}
+
+
+.tb_signup {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.tb_signup th {
+    width: 110px;
+    color: #262c32;
+    font-size: 16px;
+    text-align: left;
+    letter-spacing: -1px
+}
+.tb_signup td {
+    min-height: 61px;
+    padding: 3px 0 2px
+}
+.tb_signup td * {
+    vertical-align: middle
+}
+
+.tb_signup label {
+    padding-right: 50px;
+    font-size: 14px;
+    color: #51575e
+}
+.tb_signup li label {
+    padding-right: 0
+}
+.tb_signup label input {
+    margin: -2px 5px 0 0;
+    font-size: 14px;
+    color: #51575e;
+}
+.tb_signup select,
+.tb_signup input {
+    font-size: 12px;
+    font-family: 'Gulim', sans-serif;
+    color: #929da8
+}
+.tb_signup input[type=text],
+.tb_signup input[type=password] {
+    width: 100%;
+    height: 56px;
+    padding-left: 15px;
+    border: 1px solid #dee7f0;
+    background: #f8fafc;
+}
+.tb_signup input[type=password] {
+    padding-right: 50%
+}
+.tb_signup .list_radio {
+    padding: 15px 0
+}
+.tb_signup .list_radio li {
+    padding: 5px 0
+}
+.wrap_inputBtn {
+    position: relative;
+    padding-right: 110px
+}
+.wrap_inputBtn button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 108px;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    background: #8e50f6;
+    font-family: 'Gulim', sans-serif;
+}
+.wrap_inputBtn button[disabled=disabled] {
+    background: #c9d2db;
+}
+.wrap_inputPw {
+    position: relative;
+}
+.wrap_inputPw p {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    line-height: 56px;
+    color: #ff0000;
+    font-family: 'Gulim', sans-serif;
+}
+
+
+.wrap_memberType {
+    margin-top: 20px;
+    padding-top: 45px;
+    border-top: 1px dotted #929598
+}
+.wrap_tb_signup {
+    padding: 18px 20px;
+    border: 1px solid #dee7f0;
+    background: #f8fafc;
+}
+.wrap_tb_signup {
+    padding: 18px 20px;
+    border: 1px solid #dee7f0;
+    background: #f8fafc;
+}
+.wrap_tb_signup .tb_signup td {
+    min-height: 55px;
+    padding: 3px 0 2px
+}
+.wrap_tb_signup table input[type=text] {
+    height: 50px;
+    border-color: #dee7f0;
+    background-color: #fff
+}
+.wrap_tb_signup table th {
+    width: 120px;
+    font-weight: normal
+}
+.wrap_tb_signup .wrap_textarea {
+    border: 1px solid #dee7f0;
+    background-color: #fff;
+    padding: 10px 0 10px 20px
+}
+.wrap_tb_signup .wrap_textarea textarea {
+    width: 100%;
+    height: 56px;
+    border: 0;
+    background: transparent;
+}
+.wrap_memberType > div:first-child ~ div {
+    display: none
+}
+
+
+
+
+
+.txt_notice {
+    color: #8e50f6;
+    font-size: 12px;
+    font-family: 'Gulim', sans-serif;
+    text-align: right;
+    padding: 10px 0;
+    margin-bottom: -30px
+}
+
+td .list_selectbox {
+    margin-left: -5px
+}
+td .list_selectbox:after {
+    content: ' ';
+    display: block;
+    clear: both
+}
+td .list_selectbox li {
+    float: left;
+    width: 33.3%;
+    padding-left: 5px;
+}
+td .list_selectbox select {
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    border: 1px solid #dee7f0;
+    background-color: #fff;
+}
+
+
+.cont_type2 .tb_signup th,
+.cont_type2 .tb_signup td {
+    display: block;
+    width: auto;
+}
+.cont_type2 .tb_signup th {
+    margin: 10px 0 3px
+}
+.tb_signup .tr_float th,
+.cont_type2 .tb_signup td {
+    min-height: 50px;
+    line-height: 50px
+}
+.cont_type2 .tb_signup .tr_float:after {
+    content: ' ';
+    display: block;
+    clear: both
+}
+.tb_signup .tr_float th {
+    float: left;
+    margin: 10px 0
+}
+.tb_signup .tr_float td {
+    float: right;
+    margin: 10px 0;
+    padding: 0
+}
+.tb_signup .tr_float td input[type=text]{
+    width: 418px
+}

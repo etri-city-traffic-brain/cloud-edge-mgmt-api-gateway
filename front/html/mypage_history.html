@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="Author" content="" />
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="/lib/css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700" />
+        <link rel="stylesheet" type="text/css" href="/lib/css/font.css" />
+        <link rel="stylesheet" type="text/css" href="/lib/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="/lib/css/style.css" />
+
+        <!--[if lt IE 9]>
+            <script src="/lib/js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="layout_wrap_sub">
+            <header class="header_common">
+                <div class="layout_inner">
+                    <div class="header_top layout_clearfix">
+                        <h1 class="header_top_logo">
+                            <a href="/"><img src="/lib/images/header_logo_uniq.png" alt="Cloudit"/></a>
+                        </h1>
+                        <div class="header_top_user">
+                            <div class="header_top_user_photo"></div>
+                            <button type="button" class="header_top_user_btn js_arr_toggle js_user_open">Hong Kil Dong</button>
+                            <div class="header_top_user_menu">
+                                <a href="#">사용자 설정</a>
+                                <a href="#">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //header_top -->
+                </div>
+                <!-- //layout_inner -->
+
+                <nav class="header_nav">
+                    <div class="layout_inner layout_clearfix">
+                        <button type="button" class="header_nav_btn js_arr_toggle js_nav_btn">전체메뉴</button>
+                        <ul class="header_nav_menu">
+                            <li><a href="/src/guide.html">이용안내</a></li>
+                            <li>
+                                <a href="/src/data.html">데이터</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/data_oda.html">오픈데이터 API</a>
+                                    <a href="/src/data_file.html">파일데이터</a>
+                                    <a href="/src/data_recommend.html">오픈데이터 추천</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/src/lib_notice.html">정보공유</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/lib_notice.html">공지사항</a>
+                                    <a href="/src/lib_board.html">자유게시판</a>
+                                    <a href="/src/lib_request.html">API 요청 게시판</a>
+                                </div>
+                            </li>
+                            <li class="on">
+                                <a href="/src/mypage.html">마이페이지</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/mypage.html">나의 오픈 API</a>
+                                    <a href="/src/mypage_history.html">나의 사용이력</a>
+                                    <a href="/src/mypage_favorites.html">즐겨찾기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //layout_inner -->
+                </nav>
+            </header>
+
+            <section class="sub_nav">
+                <h2>마이페이지</h2>
+                <div class="sub_nav_menu">
+                    <a href="/src/mypage.html">나의 오픈 API</a>
+                    <a href="/src/mypage_history.html" class="on">나의 사용이력</a>
+                    <a href="/src/mypage_favorites.html">즐겨찾기</a>
+                </div>
+            </section>
+            <!-- //sub_visual -->
+
+            <main class="main_sub">
+                <div class="layout_inner layout_clearfix">
+                    <div class="layout_sub_side">
+                        <h2>마이페이지</h2>
+                        <div class="sub_nav_menu">
+                            <a href="/src/mypage.html">나의 오픈 API</a>
+                            <a href="/src/mypage_history.html" class="on">나의 사용이력</a>
+                            <a href="/src/mypage_favorites.html">즐겨찾기</a>
+                        </div>
+                    </div>
+                    <!-- //layout_sub_side -->
+
+                    <div class="layout_sub_cont">
+                        <div class="cont_mypage_history">
+                            <div class="cont_history_summary">
+                                <div class="cont_history_summary_count">
+                                    <div class="head">사용</div>
+                                    <div class="body">
+                                        <strong class="count">5</strong>
+                                        <p>개발 계정신청이 승인되어 사용중인 단계</p>
+                                    </div>
+                                </div>
+                                <div class="cont_history_summary_count">
+                                    <div class="head">사용완료</div>
+                                    <div class="body">
+                                        <strong class="count">5</strong>
+                                        <p>개발 계정신청이 승인되어 사용중인 단계</p>
+                                    </div>
+                                </div>
+                                <div class="cont_history_summary_graph">
+                                    <div class="head">사용량</div>
+                                    <div class="body">
+                                        <div class="cont_graph_wrap">
+                                            <select id="" class="cont_graph_select"
+                                                ><option>월단위</option></select
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //cont_mypage_history -->
+
+                        <table class="tb_mypage_list tb_mypage_list_detail">
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>오픈 데이터 API 이름</th>
+                                    <th>활동 유형</th>
+                                    <th>URL</th>
+                                    <th>분류</th>
+                                    <th>결과 형태</th>
+                                    <th>오픈데이터 제공처</th>
+                                    <th>요청 변수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr_mypage_list_on">
+                                    <td>1</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="8" class="td_inner_wrap">
+                                        <div class="cont_mypage_detail_inner">
+                                            <button type="button" class="btn_mypage_list_close js_tbclose_btn">닫기</button>
+                                            <div class="cont_mypage_detail_inner_tit"></div>
+                                            <table class="tb_mypage_detail_inner">
+                                                <tr>
+                                                    <th>오픈데이터 API 이름</th>
+                                                    <td>소상공인 상가업소 정보</td>
+                                                    <th>활동 유형</th>
+                                                    <td>RESTful</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>URL</th>
+                                                    <td></td>
+                                                    <th>결과 형태</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>데이터 사용량</th>
+                                                    <td></td>
+                                                    <th>오픈데이터 제공처</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>데이터 등록일</th>
+                                                    <td></td>
+                                                    <th>데이터 만료일</th>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <th>남은 사용 횟수</th>
+                                                    <td></td>
+                                                    <th></th>
+                                                    <td></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- //cont_mypage_detail_inner -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>소상공인 상가업소 정보 서비스</td>
+                                    <td>RESTful</td>
+                                    <td><a href="#">http://opis.data.go.kr/9955394//opi/open/sdsc</a></td>
+                                    <td></td>
+                                    <td>XML</td>
+                                    <td>공공데이터 포털</td>
+                                    <td><button type="button" class="btn_mypage_list js_tbopen_btn">보기</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="cont_board_pagenation">
+                            <a href="#" class="cont_board_pagenation_btn prev">prev</a>
+                            <a href="#">1</a>
+                            <a href="#" class="current">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#" class="cont_board_pagenation_btn next">next</a>
+                        </div>
+                        <!-- //cont_board_pagenation -->
+                    </div>
+                    <!-- //layout_sub_cont -->
+                </div>
+                <!-- //layout_inner -->
+            </main>
+
+            <footer class="footer_common">
+                <div class="footer_cont">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_cont_logo">
+                            <a href="#"><img src="/lib/images/footer_logo_inno.png" alt="정보통신산업진흥원"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_molit.png" alt="국토교통부"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_innogrid.png" alt="이노그리드"/></a>
+                        </div>
+                        <div class="footer_cont_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이메일</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //footer_cont -->
+                <div class="footer_address">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_address_company">
+                            <p class="footer_address_company_address">
+                                서울시 서초구 강남대로 623 우일빌딩 10층 ( 서울시 서초구 잠원동 12-5,6 ) 이노그리드
+                            </p>
+                            <p>
+                                대표이사 : 김명진&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 : 12-73037383<br />통신판매업신고 : 제
+                                2012-서울강남-00571호
+                            </p>
+                        </div>
+                        <p class="footer_address_copyright">COPYRIGHT 2019 innogrid. All right reserved.</p>
+                    </div>
+                    <!-- //layout_inner -->
+                </div>
+                <!-- //footer_address -->
+            </footer>
+        </div>
+        <!-- //layout_wrap -->
+
+        <script src="/lib/js/jquery-1.9.1.min.js"></script>
+        <script src="/lib/js/jquery.script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="Author" content="" />
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="../lib/css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/font.css" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/style.css" />
+
+        <!--[if lt IE 9]>
+            <script src="/lib/js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="layout_wrap_sub" data-component="layout_wrap_sub">
+            <header class="header_common">
+                <div class="layout_inner">
+                    <div class="header_top layout_clearfix">
+                        <h1 class="header_top_logo">
+                            <a href="/"><img src="../lib/images/header_logo_uniq.png" alt="Cloudit"/></a>
+                        </h1>
+                        <div class="header_top_user">
+                            <div class="header_top_user_photo"></div>
+                            <button type="button" class="header_top_user_btn js_arr_toggle js_user_open">Hong Kil Dong</button>
+                            <div class="header_top_user_menu">
+                                <a href="#">사용자 설정</a>
+                                <a href="#">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //header_top -->
+                </div>
+                <!-- //layout_inner -->
+
+                <nav class="header_nav" data-component="header_nav">
+                    <div class="layout_inner layout_clearfix">
+                        <button type="button" class="header_nav_btn js_arr_toggle js_nav_btn">전체메뉴</button>
+                        <ul class="header_nav_menu">
+                            <li><a href="../src/guide.html">이용안내</a></li>
+                            <li>
+                                <a href="../src/data.html">데이터</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="../src/data_oda.html">오픈데이터 API</a>
+                                    <a href="../src/data_file.html">파일데이터</a>
+                                    <a href="../src/data_recommend.html">오픈데이터 추천</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="../src/lib_notice.html">정보공유</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="../src/lib_notice.html">공지사항</a>
+                                    <a href="../src/lib_board.html">자유게시판</a>
+                                    <a href="../src/lib_request.html">API 요청 게시판</a>
+                                </div>
+                            </li>
+                            <li class="on">
+                                <a href="../src/mypage.html">마이페이지</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="../src/mypage.html">나의 오픈 API</a>
+                                    <a href="../src/mypage_history.html">나의 사용이력</a>
+                                    <a href="../src/mypage_favorites.html">즐겨찾기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //layout_inner -->
+                </nav>
+            </header>
+
+            <section class="sub_nav" data-component="sub_nav">
+                <h2>마이페이지</h2>
+                <div class="sub_nav_menu">
+                    <a href="../src/mypage.html" class="on">나의 오픈 API</a>
+                    <a href="../src/mypage_history.html">나의 사용이력</a>
+                    <a href="../src/mypage_favorites.html">즐겨찾기</a>
+                </div>
+            </section>
+            <!-- //sub_visual -->
+
+            <main class="main_sub" data-component="main_sub">
+                <div class="layout_inner layout_clearfix">
+                    <div class="layout_sub_side">
+                        <h2>마이페이지</h2>
+                        <div class="sub_nav_menu">
+                            <a href="../src/mypage.html" class="on">나의 오픈 API</a>
+                            <a href="../src/mypage_history.html">나의 사용이력</a>
+                            <a href="../src/mypage_favorites.html">즐겨찾기</a>
+                        </div>
+                    </div>
+                    <!-- //layout_sub_side -->
+
+                    <div class="layout_sub_cont">
+                        <div class="cont_data_search">
+                            <div class="cont_data_search_form_key">
+                                <div class="tit">나의 인증키</div>
+                                <div>tkfkd093gody02dusdPrk10wndrP</div>
+                            </div>
+                            <!-- //cont_data_search_form -->
+                        </div>
+                        <!-- //cont_data_search -->
+
+                        <div class="cont_mypage_tableHeader layout_clearfix">
+                            <form method="">
+                                <div class="cont_mypage_tableHeader_search">
+                                    <div class="cont_mypage_tableHeader_search_select">
+                                        <select id="">
+                                            <option value="">대분류</option>
+                                        </select>
+                                        <select id="">
+                                            <option value="">중분류</option>
+                                        </select>
+                                        <select id="">
+                                            <option value="">소분류</option>
+                                        </select>
+                                    </div>
+                                    <div class="cont_mypage_tableHeader_search_input">
+                                        <input type="text" id="" />
+                                        <button type="submit" class=""><span>Search</span></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- //cont_mypage_tbTop -->
+
+                        <table class="tb_mypage_list">
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>번호</th>
+                                    <th>오픈 데이터 API 이름</th>
+                                    <th>활용 유형</th>
+                                    <th>예제</th>
+                                    <th>결과 형태</th>
+                                    <th>오픈 데이터 제공처</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>1</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                            <div class="pop_code">
+                                                var request = require("request");<br /><br />
+
+                                                var options = { method: 'POST',<br />
+                                                url: 'http://localhost:8080/token'
+                                            </div>
+                                            <!-- //pop_code -->
+                                        </div>
+                                        <!-- //cont_mypage_detail_code -->
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr class="tr_mypage_list_on">
+                                    <td><input type="checkbox" id="" checked="checked" /></td>
+                                    <td>2</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                            <div class="pop_code">
+                                                var request = require("request");<br /><br />
+
+                                                var options = { method: 'POST',<br />
+                                                url: 'http://localhost:8080/token',<br />
+                                                headers:<br />
+                                                { 'postman-token': '1f38d6b1-465d-2fc0-a297-97550c66c2a4',<br />
+                                                'cache-control': 'no-cache',<br />
+                                                'content-type': 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' },
+                                                formData: { setId: 'userId', setRole: 'role' } };
+                                            </div>
+                                            <!-- //pop_code -->
+                                        </div>
+                                        <!-- //cont_mypage_detail_code -->
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>3</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                            <div class="pop_code">
+                                                var request = require("request");<br /><br />
+
+                                                var options = { method: 'POST',<br />
+                                                url: 'http://localhost:8080/token'
+                                            </div>
+                                            <!-- //pop_code -->
+                                        </div>
+                                        <!-- //cont_mypage_detail_code -->
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>4</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                            <div class="pop_code">
+                                                var request = require("request");<br /><br />
+
+                                                var options = { method: 'POST',<br />
+                                                url: 'http://localhost:8080/token'
+                                            </div>
+                                            <!-- //pop_code -->
+                                        </div>
+                                        <!-- //cont_mypage_detail_code -->
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>5</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>6</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>7</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>8</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>9</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="" /></td>
+                                    <td>10</td>
+                                    <td><a href="mypage_detail.html">소상공인 상가업소 정보 서비스</a></td>
+                                    <td>RESTful</td>
+                                    <td>
+                                        <div class="cont_mypage_detail_code">
+                                            <button type="button" class="btn_mypage_list_code js_code_btn">code</button>
+                                        </div>
+                                    </td>
+                                    <td>XML</td>
+                                    <td>부산 스마트시티 데이터</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="cont_mypage_btns">
+                            <div class="cont_mypage_btns_inner">
+                                <button type="button" class="btn_btm_cancel">open API 제거</button>
+                            </div>
+                        </div>
+
+                        <div class="cont_board_pagenation">
+                            <a href="#" class="cont_board_pagenation_btn prev">prev</a>
+                            <a href="#">1</a>
+                            <a href="#" class="current">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#" class="cont_board_pagenation_btn next">next</a>
+                        </div>
+                        <!-- //cont_board_pagenation -->
+                    </div>
+                    <!-- //layout_sub_cont -->
+                </div>
+                <!-- //layout_inner -->
+            </main>
+
+            <footer class="footer_common" data-component="footer_common">
+                <div class="footer_cont">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_cont_logo">
+                            <a href="#"><img src="/lib/images/footer_logo_inno.png" alt="정보통신산업진흥원"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_molit.png" alt="국토교통부"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_innogrid.png" alt="이노그리드"/></a>
+                        </div>
+                        <div class="footer_cont_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이메일</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //footer_cont -->
+                <div class="footer_address">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_address_company">
+                            <p class="footer_address_company_address">
+                                서울시 서초구 강남대로 623 우일빌딩 10층 ( 서울시 서초구 잠원동 12-5,6 ) 이노그리드
+                            </p>
+                            <p>
+                                대표이사 : 김명진&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 : 12-73037383<br />통신판매업신고 : 제
+                                2012-서울강남-00571호
+                            </p>
+                        </div>
+                        <p class="footer_address_copyright">COPYRIGHT 2019 innogrid. All right reserved.</p>
+                    </div>
+                    <!-- //layout_inner -->
+                </div>
+                <!-- //footer_address -->
+            </footer>
+        </div>
+        <!-- //layout_wrap -->
+
+        <script src="/lib/js/jquery-1.9.1.min.js"></script>
+        <script src="/lib/js/jquery.script.js"></script>
+    </body>
+</html>

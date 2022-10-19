@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta name="Author" content="" />
+        <meta name="Keywords" content="" />
+        <meta name="Description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" href="../lib/css/normalize.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,700" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/font.css" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/swiper.min.css" />
+        <link rel="stylesheet" type="text/css" href="../lib/css/style.css" />
+
+        <!--[if lt IE 9]>
+            <script src="/lib/js/html5shiv.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="layout_wrap_sub">
+            <header class="header_common" data-component="Header">
+                <div class="layout_inner">
+                    <div class="header_top layout_clearfix">
+                        <h1 class="header_top_logo">
+                            <a href="/"><img src="/lib/images/header_logo_uniq.png" alt="Cloudit"/></a>
+                        </h1>
+                        <div class="header_top_user">
+                            <div class="header_top_user_photo"></div>
+                            <button type="button" class="header_top_user_btn js_arr_toggle js_user_open">Hong Kil Dong</button>
+                            <div class="header_top_user_menu">
+                                <a href="#">사용자 설정</a>
+                                <a href="#">로그아웃</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //header_top -->
+                </div>
+                <!-- //layout_inner -->
+
+                <nav class="header_nav" data-component="header_nav">
+                    <div class="layout_inner layout_clearfix">
+                        <button type="button" class="header_nav_btn js_arr_toggle js_nav_btn">전체메뉴</button>
+                        <ul class="header_nav_menu">
+                            <li><a href="/src/guide.html">이용안내</a></li>
+                            <li class="on">
+                                <a href="/src/data.html">데이터</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/data_oda.html">오픈데이터 API</a>
+                                    <a href="/src/data_file.html">파일데이터</a>
+                                    <a href="/src/data_recommend.html">오픈데이터 추천</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/src/lib_notice.html">정보공유</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/lib_notice.html">공지사항</a>
+                                    <a href="/src/lib_board.html">자유게시판</a>
+                                    <a href="/src/lib_request.html">API 요청 게시판</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/src/mypage.html">마이페이지</a>
+                                <div class="header_nav_menu_sub js_nav_menu">
+                                    <a href="/src/mypage.html">나의 오픈 API</a>
+                                    <a href="/src/mypage_history.html">나의 사용이력</a>
+                                    <a href="/src/mypage_favorites.html">즐겨찾기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- //layout_inner -->
+                </nav>
+            </header>
+
+            <section class="sub_nav" data-component="sub_nav">
+                <h2>데이터</h2>
+                <div class="sub_nav_menu">
+                    <a href="/src/data.html" class="on">전체</a>
+                    <a href="/src/data_oda.html">오픈데이터 API</a>
+                    <a href="/src/data_file.html">파일데이터</a>
+                    <a href="/src/data_recommend.html">오픈데이터 추천</a>
+                </div>
+            </section>
+            <!-- //sub_visual -->
+
+            <main class="main_sub" data-component="main_index">
+                <div class="layout_inner layout_clearfix">
+                    <div class="layout_sub_side">
+                        <h2>데이터</h2>
+                        <div class="sub_nav_menu">
+                            <a href="/src/data.html" class="on">전체</a>
+                            <a href="/src/data_oda.html">오픈데이터 API</a>
+                            <a href="/src/data_file.html">파일데이터</a>
+                            <a href="/src/data_recommend.html">오픈데이터 추천</a>
+                        </div>
+                    </div>
+                    <!-- //layout_sub_side -->
+
+                    <div class="layout_sub_cont">
+                        <div class="cont_data_search">
+                            <div class="cont_data_search_form">
+                                <form method="">
+                                    <div class="cont_data_search_form_select">
+                                        <select id="">
+                                            <option value="">대분류</option>
+                                        </select>
+                                        <select id="">
+                                            <option value="">중분류</option>
+                                        </select>
+                                        <select id="">
+                                            <option value="">소분류</option>
+                                        </select>
+                                    </div>
+                                    <div class="cont_data_search_form_input">
+                                        <input type="text" id="" />
+                                        <button type="submit" class="cont_data_search_form_btn"><span>Search</span></button>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- //cont_data_search_form -->
+                            <div class="cont_data_search_keyword">
+                                <h4>인기검색어</h4>
+                                <ul class="layout_clearfix">
+                                    <li><a href="#">미세먼지</a></li>
+                                    <li><a href="#">은평구 문화재</a></li>
+                                    <li><a href="#">오늘 서울 날씨</a></li>
+                                    <li><a href="#">연속지적도</a></li>
+                                    <li><a href="#">중국 황사</a></li>
+                                </ul>
+                            </div>
+                            <!-- //cont_data_search_keyword -->
+                        </div>
+                        <!-- //cont_data_search -->
+
+                        <ul class="cont_data_list layout_clearfix">
+                            <li>
+                                <div class="cont_data_label layout_clearfix">
+                                    <div class="json">json</div>
+                                    <div class="xml">xml</div>
+                                    <div class="xls">xls</div>
+                                </div>
+                                <!-- //cont_data_label -->
+                                <div class="cont_data_tit layout_clearfix">
+                                    <div class="cont_data_tit_category">공간 정보</div>
+                                    <div class="cont_data_tit_txt">교통사고 GIS 노선별 검색</div>
+                                    <div class="cont_data_tit_hit"><span>조회수</span><strong>58</strong></div>
+                                </div>
+                                <!-- //cont_data_tit -->
+                                <div class="cont_data_body layout_clearfix">
+                                    <p>교통시설, 교통수단 및 교통안전과 관련된 교통 정보 교통안전</p>
+                                    <div class="cont_data_body_info">
+                                        <div><span>수정일</span><strong>2019.01.21</strong></div>
+                                        <div><span>제공처</span><strong>국가교통부</strong></div>
+                                        <div><span>활동유형</span><strong>RESTful</strong></div>
+                                    </div>
+                                </div>
+                                <!-- //cont_data_body -->
+                            </li>
+                            <li>
+                                <div class="cont_data_label layout_clearfix">
+                                    <div class="xlsx">xlsx</div>
+                                    <div class="txt">txt</div>
+                                    <div class="hwp">hwp</div>
+                                </div>
+                                <!-- //cont_data_label -->
+                                <div class="cont_data_tit layout_clearfix">
+                                    <div class="cont_data_tit_category">인구/가구</div>
+                                    <div class="cont_data_tit_txt">서울시 주민등록인구 통계</div>
+                                    <div class="cont_data_tit_hit"><span>조회수</span><strong>42</strong></div>
+                                </div>
+                                <!-- //cont_data_tit -->
+                                <div class="cont_data_body layout_clearfix">
+                                    <p>주민등록인구에 관한 통계 정보</p>
+                                    <div class="cont_data_body_info">
+                                        <div><span>수정일</span><strong>2019.01.21</strong></div>
+                                        <div><span>제공처</span><strong>국가교통부</strong></div>
+                                        <div><span>활동유형</span><strong>RESTful</strong></div>
+                                    </div>
+                                </div>
+                                <!-- //cont_data_body -->
+                            </li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <!-- //cont_data_list -->
+
+                        <div class="cont_board_pagenation">
+                            <a href="#" class="cont_board_pagenation_btn prev">prev</a>
+                            <a href="#">1</a>
+                            <a href="#" class="current">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">7</a>
+                            <a href="#">8</a>
+                            <a href="#">9</a>
+                            <a href="#">10</a>
+                            <a href="#" class="cont_board_pagenation_btn next">next</a>
+                        </div>
+                        <!-- //cont_board_pagenation -->
+                    </div>
+                    <!-- //layout_sub_cont -->
+                </div>
+                <!-- //layout_inner -->
+            </main>
+
+            <footer class="footer_common" data-component="footer_common">
+                <div class="footer_cont">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_cont_logo">
+                            <a href="#"><img src="/lib/images/footer_logo_inno.png" alt="정보통신산업진흥원"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_molit.png" alt="국토교통부"/></a>
+                            <a href="#"><img src="/lib/images/footer_logo_innogrid.png" alt="이노그리드"/></a>
+                        </div>
+                        <div class="footer_cont_menu">
+                            <a href="#">이용약관</a>
+                            <a href="#">개인정보처리방침</a>
+                            <a href="#">이메일</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- //footer_cont -->
+                <div class="footer_address">
+                    <div class="layout_inner layout_clearfix">
+                        <div class="footer_address_company">
+                            <p class="footer_address_company_address">
+                                서울시 서초구 강남대로 623 우일빌딩 10층 ( 서울시 서초구 잠원동 12-5,6 ) 이노그리드
+                            </p>
+                            <p>
+                                대표이사 : 김명진&nbsp;&nbsp;&nbsp;&nbsp;사업자 등록번호 : 12-73037383<br />통신판매업신고 : 제
+                                2012-서울강남-00571호
+                            </p>
+                        </div>
+                        <p class="footer_address_copyright">COPYRIGHT 2019 innogrid. All right reserved.</p>
+                    </div>
+                    <!-- //layout_inner -->
+                </div>
+                <!-- //footer_address -->
+            </footer>
+        </div>
+        <!-- //layout_wrap -->
+
+        <script src="/lib/js/jquery-1.9.1.min.js"></script>
+        <script src="/lib/js/jquery.script.js"></script>
+    </body>
+</html>
