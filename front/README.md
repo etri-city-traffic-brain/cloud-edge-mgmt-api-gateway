@@ -33,5 +33,5 @@ PaaS 개발자를 위한 오픈데이터 API 제공 Portal
 * 마이페이지 - 나의 사용이력  
 ![image](https://user-images.githubusercontent.com/23303734/204433971-791d4998-7a92-4010-a776-867cc9978328.png)
 
-* 마이페이지 -   
+* 마이페이지 - 즐겨찾기  
 ![image](https://user-images.githubusercontent.com/23303734/204434025-87803834-80a5-45aa-8755-698d6694ed4f.png)
