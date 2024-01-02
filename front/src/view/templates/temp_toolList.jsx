@@ -69,6 +69,7 @@ class Clickable extends React.Component
 class sub_cardList extends React.Component 
 {
   constructor(...props) {
+    
     super(...props);
     this.handleClick = this.handleClick.bind(this);
     this.handleCardClick = this.handleCardClick.bind(this);
