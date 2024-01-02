@@ -337,6 +337,7 @@ router.get('/:openapi_no', function(req, res, next) {
                                                                         }
                                                                     })
                                                                 });
+                                                                
                                                                 console.log('히스토리 저장 성공');
                                                             }
                                                         });

@@ -19,13 +19,11 @@ router.get('/download/:fileid', function(req, res, next) {
     if(fileid == 'openapi양식.xlsx'){
         origFileNm = 'openapi양식.xlsx';
         savedFileNm = 'openapi양식.xlsx';
-        //savedPath = 'C:/Users/innogrid/intellijproject_odag/odag-gateway3/file';
    savedPath = '~/odag-gateway/file/';
    	}
     else if(fileid == 'filedata양식.xlsx'){
         origFileNm = 'filedata양식.xlsx';
         savedFileNm = 'filedata양식.xlsx';
-    //    savedPath = 'C:/Users/innogrid/intellijproject_odag/odag-gateway3/file';
     savedPath = '../file/';
 	}
 
@@ -33,7 +31,6 @@ router.get('/download/:fileid', function(req, res, next) {
     console.log(file);
     mimetype = mime.lookup(origFileNm);
 
-    // res.setHeader('Content-disposition', 'attachment; filename = ' + origFileNm);
     res.setHeader('Content-type', mimetype);
     var filestream = fs.createReadStream(file);
     console.log(filestream);
