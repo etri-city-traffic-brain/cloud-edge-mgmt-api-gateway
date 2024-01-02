@@ -247,10 +247,7 @@ class view_mypage extends React.Component {
                 console.log("information key = " + this.state.rows[0].key);
                 logger.disableLogger();
 
-                // console.log('information data length = ' + response.data.length);
-                // console.log('information data rowsperpage = ' + this.state.rowsPerPage);
                 this.state.pagemax = Math.ceil(response.data.length / this.state.rowsPerPage);
-                // console.log('information page = ' + this.state.pagemax);
                 this.state.endpage = (Math.floor(parseInt(this.state.page / 10)) + 1) * 10;
                 for (var i = 0; i < this.state.pagemax; i++) {
                     this.state.pagemap.push(i);

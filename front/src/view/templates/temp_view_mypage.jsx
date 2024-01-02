@@ -253,6 +253,10 @@ class sub_mypage extends React.Component {
                   <th>인증키</th>
                   <td colSpan={3}>{this.state.fetchings == false && this.state.rows2[0].auth_key}</td>
                 </tr>
+                  <tr>
+                  <th>참고 문헌</th>
+                  <td colSpan={3}><a href={this.state.rows.keyword}>filedata 등록 양식 다운로드</a></td>
+                </tr>
                 <tr className="tb_data_detail_line">
                   <th>설명</th>
                   <td colSpan={3}>
